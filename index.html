@@ -5,5 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ph-tube</title>
   </head>
-  <body></body>
+
+  <!-- daisyuI cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@3.6.1/dist/full.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@3.6.1/dist/full.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- css -->
+  <style>
+    .active {
+      background-color: red;
+      text: white;
+    }
+  </style>
+
+  <body>
+    <header>
+      <nav
+        class="w-11/12 flex justify-between items-center border-b mx-auto py-5"
+      >
+        <div class="logo w-[120px]">
+          <img src="assets/Logo.png" alt="" />
+        </div>
+
+        <div class="search">
+          <label class="input input-bordered flex items-center gap-2 w-80">
+            <input type="text" class="grow" placeholder="Search" />
+            <!-- search icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 opacity-70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+              />
+            </svg>
+          </label>
+        </div>
+        <div class="sort">
+          <button class="btn">Sort</button>
+        </div>
+      </nav>
+    </header>
+    <nav id="categories-container" class="gap-2 flex justify-center py-3"></nav>
+    <!-- main sec -->
+    <main>
+      <section
+        class="w-11/12 mx-auto my-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
+        id="videos-container"
+      ></section>
+    </main>
+    <script src="js/video.js"></script>
+  </body>
 </html>
